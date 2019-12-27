@@ -9,6 +9,11 @@
             "UnauthRoleName": "my-amplify-app-staging-20191227210708-unauthRole",
             "StackName": "my-amplify-app-staging-20191227210708",
             "StackId": "arn:aws:cloudformation:ap-southeast-2:282384497921:stack/my-amplify-app-staging-20191227210708/a4834750-2890-11ea-a97b-0276b5cf65f2"
+        },
+        "categories": {
+            "auth": {
+                "myamplifyapp13f86fec": {}
+            }
         }
     }
 }
