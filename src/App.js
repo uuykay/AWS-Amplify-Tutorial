@@ -10,6 +10,60 @@ const styles = {
   }
 };
 
+function Step0(props) {
+  return (
+    <div>
+      <input
+        placeholder="username"
+        onChange={this.onChange}
+        name="username"
+        style={styles.input}
+      />
+      <input
+        placeholder="password"
+        onChange={this.onChange}
+        name="password"
+        type="password"
+        style={styles.input}
+      />
+      <input
+        placeholder="email"
+        onChange={this.onChange}
+        name="email"
+        style={styles.input}
+      />
+      <input
+        placeholder="phone number"
+        onChange={this.onChange}
+        name="phone_number"
+        style={styles.input}
+      />
+      <button onClick={this.signUp}>Sign Up</button>
+    </div>
+  );
+}
+
+function Step1(props) {
+  return (
+    <div>
+      <input
+        placeholder="username"
+        onChange={this.onChange}
+        name="username"
+        style={styles.input}
+        value={this.state.username}
+      />
+      <input
+        placeholder="authentication code"
+        onChange={this.onChange}
+        name="authenticationCode"
+        style={styles.input}
+      />
+      <button onClick={this.confirmSignUp}>Confirm Sign Up</button>
+    </div>
+  );
+}
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -57,54 +111,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        {this.state.step === 0 && (
-          <div>
-            <input
-              placeholder="username"
-              onChange={this.onChange}
-              name="username"
-              style={styles.input}
-            />
-            <input
-              placeholder="password"
-              onChange={this.onChange}
-              name="password"
-              type="password"
-              style={styles.input}
-            />
-            <input
-              placeholder="email"
-              onChange={this.onChange}
-              name="email"
-              style={styles.input}
-            />
-            <input
-              placeholder="phone number"
-              onChange={this.onChange}
-              name="phone_number"
-              style={styles.input}
-            />
-            <button onClick={this.signUp}>Sign Up</button>
-          </div>
-        )}
-        {this.state.step === 1 && (
-          <div>
-            <input
-              placeholder="username"
-              onChange={this.onChange}
-              name="username"
-              style={styles.input}
-              value={this.state.username}
-            />
-            <input
-              placeholder="authentication code"
-              onChange={this.onChange}
-              name="authenticationCode"
-              style={styles.input}
-            />
-            <button onClick={this.confirmSignUp}>Confirm Sign Up</button>
-          </div>
-        )}
+        {this.state.step === 0 && <Step0></Step0>}
+        {this.state.step === 1 && <Step1></Step1>}
       </div>
     );
   }
