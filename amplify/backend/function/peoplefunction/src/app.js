@@ -55,7 +55,6 @@ app.get("/people", function(req, res) {
         error: err
       });
     });
-  res.json({ people, success: "get call succeed!", url: req.url });
 });
 
 app.get("/people/*", function(req, res) {

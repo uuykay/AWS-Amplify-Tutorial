@@ -63,7 +63,7 @@
 				"Timeout": "25",
 				"Code": {
 					"S3Bucket": "my-amplify-app-staging-20191227210708-deployment",
-					"S3Key": "amplify-builds/peoplefunction-2b76724d335944506773-build.zip"
+					"S3Key": "amplify-builds/peoplefunction-68415064373370393372-build.zip"
 				}
 			}
 		},
