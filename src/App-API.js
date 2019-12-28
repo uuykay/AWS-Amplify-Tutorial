@@ -27,7 +27,7 @@ class App extends React.Component {
         <h1>People</h1>
         {this.state.people.map((person, i) => {
           return (
-            <div>
+            <div key={`person-${i}`}>
               <h2>Name: {person.name}</h2>
               <p>Hair Colour: {person.hair_color}</p>
             </div>

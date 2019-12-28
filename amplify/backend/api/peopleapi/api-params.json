@@ -4,7 +4,10 @@
             "name": "/people",
             "lambdaFunction": "peoplefunction",
             "privacy": {
-                "open": true
+                "private": true,
+                "auth": [
+                    "/GET"
+                ]
             }
         }
     ],
@@ -16,7 +19,7 @@
         }
     ],
     "privacy": {
-        "auth": 0,
+        "auth": 1,
         "unauth": 0,
         "authRoleName": "my-amplify-app-staging-20191227210708-authRole",
         "unAuthRoleName": "my-amplify-app-staging-20191227210708-unauthRole"
@@ -31,5 +34,5 @@
             ]
         }
     ],
-    "uuid": "3402a89e"
+    "uuid": "22bf9b82"
 }
