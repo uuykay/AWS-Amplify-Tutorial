@@ -16,6 +16,7 @@ Amplify Params - DO NOT EDIT */
 var express = require("express");
 var bodyParser = require("body-parser");
 var awsServerlessExpressMiddleware = require("aws-serverless-express/middleware");
+const axios = require("axios");
 
 // declare a new express app
 var app = express();
@@ -39,20 +40,21 @@ app.use(function(req, res, next) {
 
 app.get("/people", function(req, res) {
   // Add your code here
-  const people = [
-    {
-      name: "Will",
-      hair_color: "black"
-    },
-    {
-      name: "Mohan",
-      hair_color: "black"
-    },
-    {
-      name: "Steph",
-      hair_color: "black"
-    }
-  ];
+  axios
+    .get("https://swapi.co/api/people/")
+    .then(response => {
+      const people = response.data.results;
+      res.json({
+        error: null,
+        people
+      });
+    })
+    .catch(err => {
+      res.json({
+        people: null,
+        error: err
+      });
+    });
   res.json({ people, success: "get call succeed!", url: req.url });
 });
 
