@@ -154,12 +154,6 @@
                       }
                     }
                   },
-                          
-                    "security": [
-                        {
-                          "sigv4": []
-                        }
-                      ],
                   
                   "x-amazon-apigateway-integration": {
                     "responses": {
@@ -259,12 +253,6 @@
                       }
                     }
                   },
-                          
-                    "security": [
-                        {
-                          "sigv4": []
-                        }
-                      ],
                   
                   "x-amazon-apigateway-integration": {
                     "responses": {
@@ -376,7 +364,7 @@
         
         
         
-      "DeploymentAPIGWpeopleapi": {
+      "DeploymentAPIGWpeopleapi3402a89e": {
         "Type": "AWS::ApiGateway::Deployment",
         "Properties": {
           "Description": "The Development stage deployment of your API.",

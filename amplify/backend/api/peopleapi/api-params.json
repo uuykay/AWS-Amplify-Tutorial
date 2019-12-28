@@ -4,8 +4,7 @@
             "name": "/people",
             "lambdaFunction": "peoplefunction",
             "privacy": {
-                "private": true,
-                "auth": []
+                "open": true
             }
         }
     ],
@@ -31,5 +30,6 @@
                 "Arn"
             ]
         }
-    ]
+    ],
+    "uuid": "3402a89e"
 }
